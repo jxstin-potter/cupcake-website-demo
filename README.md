@@ -3,24 +3,6 @@
 Next.js storefront prototype for local delivery and nationwide cupcake shipping.  
 Includes a hero parallax, catalog browsing, account/cart pages, and deterministic mock APIs for checkout flows.
 
-## Run Locally
-
-```bash
-npm install
-npm run dev
-```
-
-App runs at [http://localhost:3000](http://localhost:3000).
-
-## Production
-
-```bash
-npm run build
-npm start
-```
-
-`npm start` requires a completed `.next` production build from `npm run build`.
-
 ## UI Screenshots
 
 Images live in the repo under `docs/screenshots/` so they render in GitHub, VS Code, and any Markdown preview that resolves paths relative to this file.
@@ -39,3 +21,21 @@ Images live in the repo under `docs/screenshots/` so they render in GitHub, VS C
 
 ### Builder + curated pathways section
 ![Builder and pathways](docs/screenshots/pathways.png)
+
+## Run Locally
+
+```bash
+npm install
+npm run dev
+```
+
+App runs at [http://localhost:3000](http://localhost:3000).
+
+## Production
+
+```bash
+npm run build
+npm start
+```
+
+`npm start` requires a completed `.next` production build from `npm run build`.

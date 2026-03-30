@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fff9fb;
+  --foreground: #3d2433;
+  --surface: #ffffff;
+  --surface-muted: #fff5f9;
+  --brand: #e85a96;
+  --brand-soft: #ffe0ee;
+  --ring: #f472b6;
+  --shadow: 0 12px 28px -16px rgba(232, 90, 150, 0.22);
+  color-scheme: light;
+}
+
+.font-display {
+  font-family: var(--font-cormorant), "Times New Roman", serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-jakarta);
+  --font-heading: var(--font-cormorant);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Keep bakery-bright even when OS prefers dark — avoids washed zinc on white cards */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #fff5f9;
+    --foreground: #3d2433;
+    --surface: #ffffff;
+    --surface-muted: #fff0f6;
+    --brand: #e85a96;
+    --brand-soft: #ffe0ee;
+    --ring: #f472b6;
+    --shadow: 0 12px 28px -16px rgba(232, 90, 150, 0.2);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-jakarta), Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-cormorant), "Times New Roman", serif;
+  letter-spacing: -0.008em;
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.72;
+  color: color-mix(in srgb, var(--foreground) 94%, #3a2730 6%);
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  transition: all 180ms ease;
+}
+
+.premium-surface {
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--brand-soft) 65%, white 35%);
+  box-shadow: var(--shadow);
+  color: var(--foreground);
+}
+
+.premium-muted {
+  background: var(--surface-muted);
+  color: var(--foreground);
+}
+
+.premium-ring:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--brand) 92%, #5a1e39 8%);
+}
+
+/* Boost readability over tinted surfaces */
+:where(.text-zinc-600) {
+  color: #4a3a42 !important;
+}
+
+:where(.text-zinc-500) {
+  color: #5d4a53 !important;
+}
+
+.bg-white {
+  color: #1f1016;
+}
+
+.readable-link {
+  color: #2f1b25;
+}
+
+.readable-link:hover {
+  color: #8d1d53;
+}
+
+.ink-on-white {
+  color: #0d0609 !important;
+}

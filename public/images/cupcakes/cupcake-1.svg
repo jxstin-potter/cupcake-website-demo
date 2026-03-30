@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#fde7ef"/>
+  <circle cx="600" cy="320" r="220" fill="#f9a8d4"/>
+  <rect x="430" y="420" width="340" height="220" rx="30" fill="#f59e0b"/>
+  <text x="600" y="740" text-anchor="middle" font-size="42" font-family="Arial" fill="#9d174d">Cupcake Placeholder 1</text>
+</svg>
